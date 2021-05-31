@@ -13,6 +13,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import ro.fasttrackit.tema11.StudentCourseApplication;
 import ro.fasttrackit.tema11.model.StudentCourse;
 import ro.fasttrackit.tema11.model.entity.Student;
+import ro.fasttrackit.tema11.service.CourseService;
+import ro.fasttrackit.tema11.service.CourseStudentService;
 import ro.fasttrackit.tema11.service.StudentService;
 
 import java.util.List;
@@ -126,6 +128,16 @@ public class StudentControllerTest {
         @Bean
         StudentService studentService() {
             return mock(StudentService.class);
+        }
+
+        @Bean
+        CourseService courseService() {
+            return mock(CourseService.class);
+        }
+
+        @Bean
+        CourseStudentService courseStudentService() {
+            return mock(CourseStudentService.class);
         }
     }
 }
